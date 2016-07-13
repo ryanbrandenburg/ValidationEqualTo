@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Check the Passwords</h2>
+        <form>
+            <div>
+                <label for="Password">Password</label>
+                <input data-val="true"
+                       id="Password"
+                       name="Password" />
+                <span class="field-validation-valid" data-valmsg-for="Password"
+                      data-valmsg-replace="true"></span>
+            </div>
+            <div>
+                <label for="ConfirmPassword">Confirm</label>
+                <input data-val="true"
+                       data-val-equalto="The password and confirmation do not match"
+                       data-val-equalto-other="Password"
+                       id="ConfirmPassword"
+                       name="ConfirmPassword" />
+                <span class="field-validation-valid" data-valmsg-for="ConfirmPassword"
+                      data-valmsg-replace="true"></span>
+            </div>
+        </form>
+    </div>
+</div>
